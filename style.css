@@ -1,0 +1,373 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    color: #333;
+    line-height: 1.6;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #eee;
+  }
+  .logo {
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+  .orange {
+    color: orange;
+  }
+  .nav-links {
+    display: flex;
+    gap: 1.5rem;
+  }
+  .nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    position: relative;
+  }
+  .nav-links a:hover::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: orange;
+  }
+  .menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  .cart-icon {
+    position: relative;
+    font-size: 1.5rem;
+    margin-left: 1rem;
+    cursor: pointer;
+  }
+  .cart-count {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background: red;
+    color: white;
+    font-size: 0.75rem;
+    padding: 2px 6px;
+    border-radius: 50%;
+  }
+  .hero {
+    position: relative;
+    text-align: center;
+  }
+  
+  .hero-text {
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    color: #333;
+  }
+  .hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  .btn {
+    padding: 0.7rem 1.5rem;
+    background: orange;
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .btn:hover {
+    background: darkorange;
+  }
+  section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 1rem;
+    gap: 2rem;
+  }
+  section img {
+    width: 300px;
+    border-radius: 10px;
+  }
+  section h2 {
+    font-size: 1.8rem;
+    color: #333;
+  }
+  section a {
+    display: inline-block;
+    margin-top: 1rem;
+    text-decoration: none;
+    color: orange;
+  }
+  .rental {
+    flex-direction: column;
+  }
+  .rental-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  .card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .card img {
+    width: 200px;
+    margin-bottom: 1rem;
+  }
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  }
+  
+  /* Testimonials */
+  .testimonials {
+    flex-direction: column;
+    text-align: center;
+  }
+  .testimonial-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+  .testimonial-card {
+    background: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 10px;
+    max-width: 300px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  }
+  
+  /* FAQ */
+  .faq {
+    flex-direction: column;
+    text-align: left;
+    max-width: 800px;
+    margin: auto;
+  }
+  .faq-item {
+    background: #f7f7f7;
+    padding: 1rem;
+    border-left: 4px solid orange;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+  }
+  .faq-item h4 {
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Footer */
+  footer {
+    background: #32475b;
+    color: white;
+    padding: 3rem 1rem;
+  }
+  .footer-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 2rem;
+  }
+  .footer-menu ul {
+    list-style: none;
+  }
+  .footer-menu li {
+    margin: 0.5rem 0;
+  }
+  .footer-social i {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+  }
+  .copy {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+  }
+  .top-btn {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background: orange;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      background: #fff;
+      position: absolute;
+      top: 70px;
+      right: 20px;
+      width: 200px;
+      padding: 1rem;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .nav-links.show {
+      display: flex;
+    }
+    .menu-toggle {
+      display: block;
+    }
+    .hero-text {
+      top: 30%;
+      left: 5%;
+      font-size: 0.9rem;
+    }
+    .hero h1 {
+      font-size: 1.5rem;
+    }
+    section {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+  .carousel-wrapper {
+    position: relative;
+    width: 100%;
+  }
+  .carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.4);
+    border: none;
+    color: white;
+    font-size: 2rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 5px;
+  }
+  .carousel-btn:hover {
+    background: rgba(0, 0, 0, 0.7);
+  }
+  .carousel-btn.left {
+    left: 20px;
+  }
+  .carousel-btn.right {
+    right: 20px;
+  }
+  .carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.8);
+    border: none;
+    color: #333;
+    font-size: 2rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+  }
+  .carousel-btn:hover {
+    background: orange;
+    color: white;
+    transform: translateY(-50%) scale(1.1);
+  }
+  .carousel-btn.left {
+    left: 15px;
+  }
+  .carousel-btn.right {
+    right: 15px;
+  }
+  
+  /* === Carousel Fixed Version === */
+  .carousel-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9; /* ✅ 固定比例，避免跳動 */
+    overflow: hidden;
+  }
+  
+  .carousel {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  
+  .carousel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* ✅ 圖片不變形，完整填滿容器 */
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none; /* 交由 JS 控制顯示哪張 */
+  }
+  
+  .carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.8);
+    border: none;
+    color: #333;
+    font-size: 2rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+  }
+  
+  .carousel-btn:hover {
+    background: orange;
+    color: white;
+    transform: translateY(-50%) scale(1.1);
+  }
+  
+  .carousel-btn.left {
+    left: 15px;
+  }
+  
+  .carousel-btn.right {
+    right: 15px;
+  }
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    height: 400px;
+  }
+  
