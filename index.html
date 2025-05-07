@@ -25,7 +25,7 @@
     <div class="menu-toggle" id="toggleBtn">☰</div>
   </header>
 
-  <!-- Hero Banner -->
+  <!--Banner -->
   <section id="home" class="hero">
     <div class="carousel-wrapper">
       <div class="carousel">
@@ -39,11 +39,11 @@
     <div class="hero-text" data-aos="fade-up">
       <h1>RIDE SMART. <br>FOLD EASY.</h1>
       
-      <!-- <button class="btn">了解更多</button> -->
+      
     </div>
   </section>
 
-  <!-- About Us -->
+  
   <section id="about" class="about" data-aos="fade-up">
     <img src="https://www.don1don.com/wp-content/uploads/2020/02/%E5%9C%98%E9%AB%9423-1024x683.jpg" alt="團隊">
     <div>
@@ -53,7 +53,7 @@
     </div>
   </section>
 
-  <!-- Products -->
+  
   <section id="products" class="rental" data-aos="fade-up">
     <h2>商品一覽</h2>
     <div class="rental-grid">
@@ -117,12 +117,24 @@
       </div>
       <div class="info-text">
         <h3>We Created The Most Advanced Scooter Technology.</h3>
-        <p>滑板車在創新翻轉科技與美感！人體工學+仿邏系統，TAS LR給你最安心的移動新選擇</p>
+        <p>兒童滑步車新選擇！
+            輕巧設計 × 安全穩定 × 人體工學車架，陪孩子一起奔向快樂童年。</p>
         <a href="#" class="btn">View More</a>
       </div>
   </section>
+  <section class="info-section reverse" data-aos="fade-up">
+    <div class="info-img">
+      <img src="https://images2.giant-bicycles.com/b_white%2Cc_fill%2Ch_1000%2Cq_95%2Cw_1920/ybknpipioml9pdfgpgmr/Alight%E7%94%9C%E9%BB%9E%E7%B3%BB%E5%88%971920x1000%E5%83%8F%E7%B4%A0800x600%E5%83%8F%E7%B4%A0820x312%E5%83%8F%E7%B4%A02.jpg" alt="Advanced Scooter">
+    </div>
+    <div class="info-text">
+      <h3>We Created The Most Advanced Scooter Technology.</h3>
+      <p>妳的城市節奏，由妳定義。
+        ALIGHT 全新系列，輕巧好騎，顏值與機能兼具，讓通勤、逛街、追風都能一車搞定。</p>
+      <a href="#" class="btn">View More</a>
+    </div>
+  </section>
+  
 
-  <!-- Testimonials -->
   <section id="testimonials" class="testimonials" data-aos="fade-up">
     <h2>用戶評價</h2>
     <div class="testimonial-grid">
@@ -196,12 +208,12 @@
 <script>
   AOS.init();
 
-  // 手機選單切換
+  // 手機選單
   document.getElementById("toggleBtn").addEventListener("click", () => {
     document.getElementById("navMenu").classList.toggle("show");
   });
 
-  // 購物車按鈕互動
+  
   document.querySelectorAll(".btn").forEach(btn => {
     btn.addEventListener("click", () => {
       const count = document.querySelector(".cart-count");
